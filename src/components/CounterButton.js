@@ -9,7 +9,6 @@ class CounterButton extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState);
     if (this.state.count !== nextState.count) {
       return true;
     }
@@ -23,10 +22,8 @@ class CounterButton extends Component {
   };
 
   render() {
-    console.log("CounterButton");
-
     return (
-      <button color={this.props.color} onClick={this.updateCount}>
+      <button id="counter" color={this.props.color} onClick={this.updateCount}>
         Count: {this.state.count}
       </button>
     );
